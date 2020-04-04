@@ -1,0 +1,59 @@
+/******** BODY HTML *****/
+html,
+body {
+  background: #2041f8;
+}
+
+/****** FULL PAGE PAGINATIONS ******/
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  height: 22px;
+  width: 7px;
+  margin: -8px 0px 0 -2px;
+  border-radius: 7px;
+  transition: all 0.5s ease-in-out;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 15px;
+  position: relative;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -3px;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 7px;
+  width: 7px;
+  border: 0;
+  background: #333;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  transition: all 0.1s ease-in-out;
+}
+
+/********** ANIMATED BG **********/
+.animation-bg {
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  top: 100%;
+  transform-origin: top;
+  z-index: 1;
+  position: absolute;
+  background: #fff;
+}
