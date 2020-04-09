@@ -73,13 +73,13 @@
   height: 10px;
   margin: -5px 0 0 -3px;
 }
-.fp-viewing-1 #fp-nav ul li a span,
-.fp-viewing-4 #fp-nav ul li a span {
+.index .fp-viewing-1 #fp-nav ul li a span,
+.index .fp-viewing-4 #fp-nav ul li a span {
   background: white;
   opacity: 0.5;
 }
-.fp-viewing-1 #fp-nav ul li a.active span,
-.fp-viewing-4 #fp-nav ul li a.active span {
+.index .fp-viewing-1 #fp-nav ul li a.active span,
+.index .fp-viewing-4 #fp-nav ul li a.active span {
   background: white;
   opacity: 1;
 }
@@ -95,6 +95,24 @@
   left: 100%;
   background: #53905f;
 }
+.contact-animation-bg {
+  width: 300%;
+  height: 300%;
+  transform-origin: top;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  background: #53905f;
+}
+@media (max-width: 1000px) {
+  .animation-bg {
+    display: none;
+  }
+  .contact-animation-bg {
+    display: none;
+  }
+}
 
 /********NAV **********/
 nav {
@@ -103,6 +121,7 @@ nav {
   background: white;
   transition: 0.4s;
   position: relative;
+  z-index: 100;
 }
 .nav_inner {
   display: flex;
@@ -118,6 +137,15 @@ nav .links a {
 }
 .section2active {
   box-shadow: 0px 4px 10px #00000019;
+}
+@media (max-width: 992px) {
+  .nav_inner {
+    width: 90% !important;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+  }
 }
 
 /****** EXPLORE *******/
@@ -135,6 +163,17 @@ nav .links a {
   padding: 8px;
   border: 1.5px solid #222222;
   margin-left: 6px;
+  cursor: pointer;
+}
+.contactexplore {
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+}
+.contactexploreBtn {
+  border-radius: 50%;
+  padding: 8px;
+  border: 1.5px solid #222222;
   cursor: pointer;
 }
 
@@ -349,6 +388,17 @@ nav .links a {
   height: 50px;
   outline: none;
   padding-left: 16px;
+}
+.section4_right_col_inner textarea {
+  border: none;
+  border: 1px solid #53905f80;
+  border-radius: 20px;
+  width: 400px;
+  height: 150px;
+  outline: none;
+  padding-left: 16px;
+  padding-top: 16px;
+  resize: none;
 }
 .section4_right_col_inner .input_group {
   position: relative;
@@ -766,4 +816,37 @@ nav .links a {
   .apps_container {
     margin-top: 30px;
   }
+}
+
+/******************** ----------------------CONTACT PAGE------------ ****************************/
+/******************************** SECTION1 *************************/
+.contact_section1_left_col {
+  padding-right: 30px;
+}
+.contact_section1_left_col h2 {
+  font-size: 40px;
+  line-height: 60px;
+  font-family: 'circular_medium';
+  color: white;
+}
+.contact_section1_left_col p {
+  font-size: 18px;
+  line-height: 40px;
+  font-family: 'circular_regular';
+  color: white;
+  opacity: 0.7;
+  text-align: justify;
+}
+.contact_section1_left_col .apps .download {
+  font-size: 18px;
+  color: white;
+  font-family: 'circular_regular';
+  opacity: 0.7;
+}
+.contact_section1_left_col .apps_inner button {
+  background: white;
+  color: var(--primary);
+}
+.contact_first_row {
+  align-items: center;
 }

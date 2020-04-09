@@ -1,24 +1,60 @@
 // FULLPAGE
 var navbar = document.getElementById('nav');
-const FullPage = new fullpage('#fullpage', {
-  scrollingSpeed: 1000,
-  easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
-  navigation: true,
-  onLeave: function (index, nextIndex, direction) {
-    animateBackground(nextIndex.index, direction);
-    shadowNavbar(nextIndex.index);
-    exploreConfig(nextIndex.index);
-  },
-});
+
+let fp1;
+const FullPage = () => {
+  fp1 = new fullpage('#fullpage', {
+    scrollingSpeed: 1000,
+    easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
+    navigation: true,
+    // responsiveWidth: 1000,
+    onLeave: function (index, nextIndex, direction) {
+      animateBackground(nextIndex.index, direction);
+      shadowNavbar(nextIndex.index);
+      exploreConfig(nextIndex.index);
+    },
+  });
+};
+
+let fp2;
+const FullPage2 = () => {
+  fp2 = new fullpage('#fullpage2', {
+    scrollingSpeed: 1000,
+    easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
+    navigation: true,
+    onLeave: function (index, nextIndex, direction) {
+      animateBackground2(nextIndex.index, direction);
+      shadowNavbar(nextIndex.index);
+      exploreConfig2(nextIndex.index);
+    },
+  });
+};
+
+window.onload = function () {
+  if (window.innerWidth > 1000) {
+    FullPage();
+    FullPage2();
+  }
+};
 
 //BACK TO TOP
 function backToTop() {
-  FullPage.moveTo(1, 0);
+  fp1.moveTo(1, 0);
 }
 
 //MOVE ONE SLIDE DOWN
 function moveSlideDown() {
-  FullPage.moveSectionDown();
+  fp1.moveSectionDown();
+}
+
+//BACK TO TOP2
+function backToTop2() {
+  fp2.moveTo(1, 0);
+}
+
+//MOVE ONE SLIDE DOWN2
+function moveSlideDown2() {
+  fp2.moveSectionDown();
 }
 
 //SHADOW NAVBAR
@@ -51,6 +87,15 @@ function exploreConfig(nextIndex) {
     document.querySelector('.explore').style.display = 'none';
   } else {
     document.querySelector('.explore').style.display = 'block';
+  }
+}
+
+//EXPLORE CONFIG2
+function exploreConfig2(nextIndex) {
+  if (nextIndex == 1) {
+    document.querySelector('.contactexplore').style.display = 'none';
+  } else {
+    document.querySelector('.contactexplore').style.display = 'block';
   }
 }
 
@@ -153,3 +198,26 @@ let animateBackground = (nextSlide, direction) => {
     }
   }
 };
+
+//CONTACT ANIMATION BG
+var contactbg = document.querySelector('.contact-animation-bg');
+function animateBackground2(nextIndex) {
+  if (nextIndex == 0) {
+    anime({
+      targets: contactbg,
+      duration: bgDuration,
+      easing: bgEasing,
+      top: 0,
+      right: '50%',
+    });
+  }
+  if (nextIndex == 1) {
+    anime({
+      targets: contactbg,
+      duration: bgDuration,
+      easing: bgEasing,
+      top: '65%',
+      right: 0,
+    });
+  }
+}
