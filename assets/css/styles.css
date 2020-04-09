@@ -161,6 +161,9 @@ nav .links a {
   .links {
     width: 70%;
   }
+  .mob_nav_item {
+    display: none;
+  }
 }
 
 /****** EXPLORE *******/
@@ -193,6 +196,9 @@ nav .links a {
 }
 @media (max-width: 992px) {
   .explore {
+    display: none;
+  }
+  .contactexplore {
     display: none;
   }
 }
@@ -553,11 +559,17 @@ nav .links a {
     width: 350px;
     height: 50px;
   }
+  .section4_right_col_inner textarea {
+    width: 350px;
+  }
 }
 @media (max-width: 400px) {
   .section4_right_col_inner input {
     width: 270px;
     height: 40px;
+  }
+  .section4_right_col_inner textarea {
+    width: 270px;
   }
 }
 
@@ -998,12 +1010,16 @@ nav .links a {
     display: none;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .apps_container_inner button {
     padding: 8px 20px;
     font-size: 10px;
   }
+  .copyright {
+    font-size: 14px !important;
+  }
 }
+
 /******************** ----------------------CONTACT PAGE------------ ****************************/
 /******************************** SECTION1 *************************/
 .contact_section1_left_col {
@@ -1035,4 +1051,28 @@ nav .links a {
 }
 .contact_first_row {
   align-items: center;
+}
+@media (max-width: 1400px) {
+  .contact_section1_left_col h2 {
+    font-size: 35px;
+    line-height: 55px;
+  }
+  .contact_section1_left_col p {
+    font-size: 16px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .contact_section1 .col-lg-6:nth-of-type(1) {
+    background: #53905f;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .contact_section1 .section_inner {
+    width: 100% !important;
+  }
+  .contact_section2 .numbers {
+    width: 90% !important;
+    margin: 60px auto;
+  }
 }
