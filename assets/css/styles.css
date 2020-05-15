@@ -33,11 +33,13 @@
   height: 7px;
   width: 7px;
   border: 0;
-  background: grey;
+  background: white;
   left: 50%;
+  opacity: 0.5;
   top: 50%;
   margin: -2px 0 0 -2px;
   transition: all 0.1s ease-in-out;
+  transition: 0.5s;
 }
 .secondpagination {
   background: #ffffff;
@@ -56,7 +58,8 @@
   margin: -8px 0px 0 -2px;
   border-radius: 7px;
   transition: all 0.5s ease-in-out;
-  background: black;
+  background: white;
+  opacity: 1;
 }
 #fp-nav ul li,
 .fp-slidesNav ul li {
@@ -73,14 +76,18 @@
   height: 10px;
   margin: -5px 0 0 -3px;
 }
-.index .fp-viewing-1 #fp-nav ul li a span,
-.index .fp-viewing-4 #fp-nav ul li a span {
-  background: white;
+
+.index .fp-viewing-2 #fp-nav ul li a span,
+.index .fp-viewing-3 #fp-nav ul li a span,
+.index .fp-viewing-5 #fp-nav ul li a span {
+  background: black;
   opacity: 0.5;
 }
-.index .fp-viewing-1 #fp-nav ul li a.active span,
-.index .fp-viewing-4 #fp-nav ul li a.active span {
-  background: white;
+
+.index .fp-viewing-3 #fp-nav ul li a.active span,
+.index .fp-viewing-3 #fp-nav ul li a.active span,
+.index .fp-viewing-5 #fp-nav ul li a.active span {
+  background: black;
   opacity: 1;
 }
 
@@ -92,7 +99,7 @@
   z-index: -1;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 0;
   background: #53905f;
 }
 .contact-animation-bg {
@@ -112,6 +119,50 @@
   .contact-animation-bg {
     display: none;
   }
+}
+
+/******* Whatsapp *********/
+.whatsapp-container {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  direction: ltr !important;
+  z-index: 2147482999;
+  justify-content: flex-end;
+}
+[data-balloon] {
+  position: relative;
+  cursor: pointer;
+}
+[data-balloon]:after {
+  pointer-events: none;
+  font-size: 12px !important;
+  background: rgba(17, 17, 17, 0.9);
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-balloon);
+  padding: 0.5em 1em;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 10;
+  left: 100%;
+  margin-left: 11px;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+[data-balloon]:before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  background: no-repeat
+    url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E');
+  background-size: 100% auto;
+  width: 6px;
+  height: 18px;
+  left: 100%;
+  margin-left: 5px;
+  top: 50%;
+  transform: translate(0px, -50%);
 }
 
 /********NAV **********/
@@ -175,13 +226,16 @@ nav .links a {
 .explore span:nth-child(1) {
   font-family: 'circular_bold';
   font-size: var(--smallFont);
+  color: white;
+  transition: 0.5s;
 }
 .explore span:nth-child(2) {
   border-radius: 50%;
   padding: 8px;
-  border: 1.5px solid #222222;
+  border: 1.5px solid white;
   margin-left: 6px;
   cursor: pointer;
+  transition: 0.5s;
 }
 .contactexplore {
   position: fixed;
@@ -207,13 +261,13 @@ nav .links a {
 .section1_col_left h1 {
   font-size: 40px;
   line-height: 60px;
-  color: var(--primary);
+  color: white;
   font-family: 'circular_medium';
 }
 .section1_col_left p {
   font-size: 18px;
   line-height: 40px;
-  color: #222222;
+  color: white;
   font-family: 'circular_regular';
   text-align: justify;
   opacity: 0.7;
@@ -223,7 +277,7 @@ nav .links a {
 }
 .apps .download {
   font-size: 18px;
-  color: #222222;
+  color: white;
   font-family: 'circular_regular';
   opacity: 0.7;
 }
@@ -369,6 +423,7 @@ nav .links a {
 }
 
 /********* SECTION3 ***********/
+
 .process_container h2 {
   font-size: 30px;
   line-height: 60px;
@@ -458,11 +513,11 @@ nav .links a {
   font-family: 'circular_medium';
 }
 .section4_left_col h1 {
-  font-size: 40px;
+  font-size: 25px;
   line-height: 40px;
   color: #ffffff;
   font-family: 'circular_regular';
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .section4_left_col h1.first {
   margin-top: 20px;
@@ -980,7 +1035,7 @@ nav .links a {
     line-height: 18px;
   }
   .footer {
-    margin-top: 35px;
+    margin-top: 80px;
   }
   .apps_container_inner {
     margin-top: 10px;
@@ -1075,4 +1130,31 @@ nav .links a {
     width: 90% !important;
     margin: 60px auto;
   }
+}
+
+/******* SWEET ALERT ANIMATION *****/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+.animate__animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
