@@ -1,44 +1,3 @@
-// WINDOW LOGIC
-window.onresize = function () {
-  if (window.innerWidth < 1000) {
-    $.fn.fullpage.destroy('all');
-  }
-};
-anime({
-  targets: '.section1_col_left h1',
-  duration: 1000,
-  easing: 'easeInOutCubic',
-  opacity: [0, 1],
-  translateY: [20, 0]
-});
-
-anime({
-  targets: '.section1_col_left p',
-  duration: 1000,
-  easing: 'linear',
-  opacity: [0, 1],
-  translateY: [20, 0],
-  delay: 500,
-});
-
-anime({
-  targets: '.section1_col_left .apps',
-  duration: 1000,
-  easing: 'linear',
-  opacity: [0, 1],
-  translateY: [20, 0],
-  delay: 1000,
-});
-anime({
-  targets: '.section1_col_right img',
-  duration: 1000,
-  easing: 'linear',
-  opacity: [0, 1],
-  translateY: [20, 0],
-  delay: 1400,
-});
-
-
 // FULLPAGE
 var navbar = document.getElementById('nav');
 let fp1;
@@ -424,3 +383,44 @@ contactForm.onsubmit = function (e) {
       console.log(error);
     })
 }
+
+
+// WINDOW LOGIC
+window.onresize = function () {
+  if (window.innerWidth < 1000) {
+    fullpage_api.destroy('all');
+  }
+};
+anime({
+  targets: '.section1_col_left h1',
+  duration: 1000,
+  easing: 'easeInOutCubic',
+  opacity: [0, 1],
+  translateY: [20, 0]
+});
+
+anime({
+  targets: '.section1_col_left p',
+  duration: 1000,
+  easing: 'linear',
+  opacity: [0, 1],
+  translateY: [20, 0],
+  delay: 500,
+});
+
+anime({
+  targets: '.section1_col_left .apps',
+  duration: 1000,
+  easing: 'linear',
+  opacity: [0, 1],
+  translateY: [20, 0],
+  delay: 1000,
+});
+anime({
+  targets: '.section1_col_right img',
+  duration: 1000,
+  easing: 'linear',
+  opacity: [0, 1],
+  translateY: [20, 0],
+  delay: 1400,
+});
