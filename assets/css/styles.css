@@ -1118,6 +1118,9 @@ nav .links a {
   }
 }
 @media (max-width: 992px) {
+  .section1 {
+    background: #53905f;
+  }
   .contact_section1 .col-lg-6:nth-of-type(1) {
     background: #53905f;
     padding-top: 30px;

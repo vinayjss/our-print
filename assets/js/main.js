@@ -1,8 +1,7 @@
 // WINDOW LOGIC
 window.onresize = function () {
   if (window.innerWidth < 1000) {
-    fp1.destroy()
-    fp2.destory()
+    $.fn.fullpage.destroy('all');
   }
 };
 anime({
