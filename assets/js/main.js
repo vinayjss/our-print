@@ -386,11 +386,11 @@ contactForm.onsubmit = function (e) {
 
 
 // WINDOW LOGIC
-window.onload = function () {
-  if (window.innerWidth < 1000) {
-    fullpage_api.destroy('all');
-  }
-};
+// window.onresize = function () {
+//   if (window.innerWidth < 1000) {
+//     fullpage_api.destroy('all');
+//   }
+// };
 anime({
   targets: '.section1_col_left h1',
   duration: 1000,
