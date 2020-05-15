@@ -1,41 +1,31 @@
 // FULLPAGE
 var navbar = document.getElementById('nav');
-let fp1;
-const FullPage = () => {
-  fp1 = new fullpage('#fullpage', {
-    scrollingSpeed: 1000,
-    easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
-    navigation: true,
-    // responsiveWidth: 1000,
-    onLeave: function (origin, nextIndex, direction) {
-      animateBackground(origin.index, nextIndex.index, direction);
-      shadowNavbar(nextIndex.index);
-      exploreConfig(nextIndex.index);
-      if (direction == 'down') {
-        $('.section').removeClass('animated');
-        $($('.section').get(nextIndex.index)).addClass('animated');
-      }
-    },
-  });
-};
+new fullpage('#fullpage', {
+  scrollingSpeed: 1000,
+  easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
+  navigation: true,
+  // responsiveWidth: 1000,
+  onLeave: function (origin, nextIndex, direction) {
+    animateBackground(origin.index, nextIndex.index, direction);
+    shadowNavbar(nextIndex.index);
+    exploreConfig(nextIndex.index);
+    if (direction == 'down') {
+      $('.section').removeClass('animated');
+      $($('.section').get(nextIndex.index)).addClass('animated');
+    }
+  },
+});
 
-let fp2;
-const FullPage2 = () => {
-  fp2 = new fullpage('#fullpage2', {
-    scrollingSpeed: 1000,
-    easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
-    navigation: true,
-    onLeave: function (index, nextIndex, direction) {
-      animateBackground2(nextIndex.index, direction);
-      shadowNavbar(nextIndex.index);
-      exploreConfig2(nextIndex.index);
-    },
-  });
-};
-
-FullPage();
-FullPage2();
-
+new fullpage('#fullpage2', {
+  scrollingSpeed: 1000,
+  easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
+  navigation: true,
+  onLeave: function (index, nextIndex, direction) {
+    animateBackground2(nextIndex.index, direction);
+    shadowNavbar(nextIndex.index);
+    exploreConfig2(nextIndex.index);
+  },
+});
 
 
 //BACK TO TOP
