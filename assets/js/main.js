@@ -376,7 +376,7 @@ contactForm.onsubmit = function (e) {
 
 
 //WINDOW LOGIC
-window.onresize = function () {
+window.onload = function () {
   if (window.innerWidth < 992) {
     fullpage_api.destroy('all');
   }
