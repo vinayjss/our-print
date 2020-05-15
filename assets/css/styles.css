@@ -994,6 +994,21 @@ nav .links a {
   font-family: 'circular_medium';
   color: white;
 }
+.footer .privacy {
+  font-size: 16px;
+  line-height: 40px;
+  font-family: 'circular_regular';
+  color: white;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.footer .privacy a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer .privacy:hover {
+  text-decoration: underline;
+}
 .backtop span:first-child {
   font-size: 16px;
   font-family: 'circular_bold';
@@ -1016,6 +1031,10 @@ nav .links a {
 .copyright {
   line-height: 20px !important;
 }
+.original_number {
+  display: none;
+}
+
 @media (max-width: 1500px) {
   .number_container h1 {
     font-size: 50px;
@@ -1064,7 +1083,14 @@ nav .links a {
   .backtop {
     display: none;
   }
+  .original_number {
+    display: block;
+  }
+  .counter_number {
+    display: none;
+  }
 }
+
 @media (max-width: 500px) {
   .apps_container_inner button {
     padding: 8px 20px;
@@ -1160,4 +1186,34 @@ nav .links a {
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+/******* PRIVACY AND TERMS ***********/
+.privacy_container {
+  padding: 50px;
+  box-shadow: 10px 0px 10px rgba(0, 0, 0, 0.1),
+    -10px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.privacy_footer {
+  background-color: #53905f;
+  padding-top: 30px;
+  margin-top: 0px;
+}
+.privacy_container h1 {
+  font-family: 'circular_medium';
+  text-align: center;
+}
+.privacy_container h4 {
+  font-family: 'circular_medium';
+  color: rgba(0, 0, 0, 0.8);
+}
+.privacy_container p,
+.privacy_container ul li {
+  font-family: 'circular_regular';
+  line-height: 30px;
+  text-align: justify;
+}
+.sign {
+  font-weight: bold;
+  color: #000069;
 }
