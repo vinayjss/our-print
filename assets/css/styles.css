@@ -4,7 +4,7 @@
   --primary: #173a50;
 }
 .section {
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 /******** GLOBAL *****/
@@ -337,7 +337,8 @@ nav .links a {
     order: 1;
   }
   .section1 {
-    padding: 50px 0px;
+    padding-top: 100px;
+    padding-bottom: 30px;
   }
   .section1 .section_inner {
     width: 90% !important;
@@ -603,7 +604,7 @@ nav .links a {
     margin-top: 10px;
   }
   .section4_left_col h1 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
     color: var(--primary);
     margin-top: 16px;
@@ -611,7 +612,6 @@ nav .links a {
   }
   .section4 .section_inner {
     width: 90% !important;
-    margin: 50px auto;
   }
   .section4_right_col {
     margin-top: 50px;
@@ -926,6 +926,11 @@ nav .links a {
   .testimonial_content p {
     font-size: 16px;
     line-height: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .section5 {
+    margin-top: 30px;
   }
 }
 
