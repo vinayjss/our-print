@@ -3,6 +3,9 @@
   --smallFont: 16px;
   --primary: #173a50;
 }
+.section {
+  margin-top: 40px;
+}
 
 /******** GLOBAL *****/
 * {
@@ -171,7 +174,7 @@ nav {
   padding: 24px 0px;
   background: white;
   transition: 0.4s;
-  position: relative;
+  position: fixed;
   z-index: 100;
 }
 .nav_inner {
@@ -361,6 +364,9 @@ nav .links a {
 }
 .section2_col_left .feature_container {
   margin-top: 60px;
+}
+.feature_container1 {
+  margin-top: 0px !important;
 }
 .section2_col_left h1 {
   font-size: 35px;
@@ -576,6 +582,7 @@ nav .links a {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   font-size: 16px;
   font-family: 'circular_bold';
+  outline: none;
 }
 .section4_right_col_inner .submit:hover {
   box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.3);
@@ -923,6 +930,15 @@ nav .links a {
 }
 
 /******************************** SECTION6 *************************/
+.section6 {
+  position: relative;
+}
+.section6 .fp-tableCell {
+  vertical-align: top !important;
+}
+.numbers {
+  margin-top: 100px;
+}
 .number_container h1 {
   font-size: 80px;
   line-height: 60px;
@@ -979,7 +995,8 @@ nav .links a {
 }
 .footer {
   width: 100%;
-  margin-top: 150px;
+  position: absolute;
+  bottom: 50px;
 }
 .footer span {
   font-size: 16px;
@@ -1076,6 +1093,7 @@ nav .links a {
   }
   .footer {
     background: #53905f;
+    position: static;
   }
   .footer .footer_inner {
     width: 100% !important;
