@@ -280,7 +280,7 @@ let animateBackground = (origin, nextSlide, direction) => {
       targets: bg,
       duration: bgDuration,
       easing: bgEasing,
-      top: '60%',
+      top: '62%',
       left: 0,
       width: '100%',
     });
