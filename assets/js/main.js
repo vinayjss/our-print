@@ -27,7 +27,6 @@ new fullpage('#fullpage2', {
   },
 });
 
-
 //BACK TO TOP
 function backToTop() {
   fp1.moveTo(1, 0);
@@ -90,9 +89,6 @@ function exploreConfig2(nextIndex) {
   }
 }
 
-
-
-
 //ANIMATION LOGIC
 var bg = document.querySelector('.animation-bg');
 let bubbles = document.querySelectorAll('.photo-wrapper img');
@@ -125,7 +121,7 @@ let animateBackground = (origin, nextSlide, direction) => {
       left: '50%',
       top: 0,
     });
-    if (direction == "down") {
+    if (direction == 'down') {
       anime({
         targets: '.feature_container1',
         duration: 1000,
@@ -173,7 +169,7 @@ let animateBackground = (origin, nextSlide, direction) => {
         opacity: [0, 1],
         duration: 2000,
         easing: 'easeInOutCubic',
-        delay: 500
+        delay: 500,
       });
       anime({
         targets: '#process2',
@@ -181,14 +177,14 @@ let animateBackground = (origin, nextSlide, direction) => {
         duration: 2000,
         opacity: [0.2, 1],
         easing: 'easeInOutCubic',
-        delay: 500
+        delay: 500,
       });
       anime({
         targets: '#process2 p',
         opacity: [0, 1],
         duration: 2000,
         easing: 'easeInOutCubic',
-        delay: 500
+        delay: 500,
       });
       anime({
         targets: '#process3',
@@ -196,14 +192,14 @@ let animateBackground = (origin, nextSlide, direction) => {
         opacity: [0.2, 1],
         duration: 2000,
         easing: 'easeInOutCubic',
-        delay: 1000
+        delay: 1000,
       });
       anime({
         targets: '#process3 p',
         opacity: [0, 1],
         duration: 3000,
         easing: 'easeInOutCubic',
-        delay: 1000
+        delay: 1000,
       });
     }
     if (direction == 'up') {
@@ -226,7 +222,7 @@ let animateBackground = (origin, nextSlide, direction) => {
       width: '50%',
       top: 0,
     });
-    if (direction == "down") {
+    if (direction == 'down') {
       anime({
         targets: '.mob_version h1',
         duration: 1000,
@@ -269,7 +265,6 @@ let animateBackground = (origin, nextSlide, direction) => {
         translateY: [20, 0],
         delay: 1200,
       });
-
     }
     if (direction == 'up') {
       anime({
@@ -285,15 +280,15 @@ let animateBackground = (origin, nextSlide, direction) => {
       targets: bg,
       duration: bgDuration,
       easing: bgEasing,
-      top: '62%',
+      top: '60%',
       left: 0,
       width: '100%',
     });
 
     setTimeout(() => {
-      Counter(counters[0], 200, 50)
-      Counter(counters[1], 50, 50)
-      Counter(counters[2], 1, 100)
+      Counter(counters[0], 200, 50);
+      Counter(counters[1], 50, 50);
+      Counter(counters[2], 1, 100);
     }, 300);
   }
 };
@@ -329,17 +324,14 @@ function Counter(element, increment, speed) {
   if (count < target) {
     setInterval(() => {
       if (count < target) {
-        count += increment
-        element.innerHTML = count
-      }
-      else {
-        clearInterval()
+        count += increment;
+        element.innerHTML = count;
+      } else {
+        clearInterval();
       }
     }, speed);
   }
 }
-
-
 
 //FORM SUBMISSION
 let contactForm = document.getElementById('contact_form');
@@ -349,13 +341,14 @@ let email = document.getElementById('email');
 let description = document.getElementById('description');
 
 contactForm.onsubmit = function (e) {
-  e.preventDefault()
-  axios.post('http://7t6.in:8383/api/contact_us/', {
-    full_name: name.value,
-    mobile: phone.value,
-    email: email.value,
-    details_of_enquiry: description.value
-  })
+  e.preventDefault();
+  axios
+    .post('http://7t6.in:8383/api/contact_us/', {
+      full_name: name.value,
+      mobile: phone.value,
+      email: email.value,
+      details_of_enquiry: description.value,
+    })
     .then(function (response) {
       console.log(response.data);
       Swal.fire({
@@ -365,15 +358,14 @@ contactForm.onsubmit = function (e) {
         confirmButtonText: 'Ok',
         timer: 4000,
         showClass: {
-          popup: 'animate__animated animate__fadeInUp'
+          popup: 'animate__animated animate__fadeInUp',
         },
-      })
+      });
     })
     .catch(function (error) {
       console.log(error);
-    })
-}
-
+    });
+};
 
 //WINDOW LOGIC
 window.onload = function () {
@@ -386,7 +378,7 @@ anime({
   duration: 1000,
   easing: 'easeInOutCubic',
   opacity: [0, 1],
-  translateY: [20, 0]
+  translateY: [20, 0],
 });
 
 anime({
