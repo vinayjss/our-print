@@ -412,20 +412,20 @@ nav .links a {
   width: 90%;
 }
 .section2_col_left .feature_container {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .feature_container1 {
   margin-top: 0px;
 }
 .section2_col_left h1 {
-  font-size: 35px;
+  font-size:calc(1.8rem + 0.5vw);
   line-height: 60px;
   color: var(--primary);
   font-family: 'circular_medium';
   margin: 0px;
 }
 .section2_col_left p {
-  font-size: 16px;
+  font-size: calc(0.65rem + 0.2vw);
   line-height: 32px;
   color: #222222;
   font-family: 'circular_regular';
@@ -516,15 +516,15 @@ nav .links a {
 }
 .path {
   position: absolute;
-  left: 30.5%;
-  top: 35%;
+  left: 30.6%;
+  top: 38%;
 }
 .path img {
-  width: 13.8vw;
+  width: 15vw;
 }
 .path2 {
   position: absolute;
-  left: 57%;
+  left: 56.7%;
   top: 38%;
 }
 .path2 img {
@@ -920,13 +920,32 @@ nav .links a {
   color: white;
 }
 .testimonial_content p {
-  font-size: 18px;
+  font-size: calc(0.8rem + 0.3vw);
   line-height: 40px;
   font-family: 'circular_regular';
   color: white;
   opacity: 0.7;
   text-align: justify;
 }
+.review_btn{
+  border:none;
+  background:none;
+  padding:10px 40px;
+  color:white;
+  border:1px solid white;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.5s;
+  font-family: 'circular_regular';
+}
+.review_btn:focus{
+  outline: none;
+}
+.review_btn:hover{
+  background:white;
+  color: black;
+}
+
 @media (max-width: 992px) {
   .section5 {
     background: #53905f;
@@ -985,12 +1004,21 @@ nav .links a {
     line-height: 40px;
   }
   .testimonial_content p {
-    font-size: 16px;
     line-height: 30px;
   }
 }
 
 /******************************** SECTION6 *************************/
+.numbers .head{
+  font-family: 'circular_bold';
+  font-size: 35px;
+  text-align:center;
+}
+.numbers .desc{
+  font-family: 'circular_regular';
+  font-size: 15px;
+  text-align:center;
+}
 .number_container h1 {
   font-size: 80px;
   line-height: 60px;

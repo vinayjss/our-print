@@ -1,6 +1,6 @@
 // FULLPAGE
 var navbar = document.getElementById('nav');
-new fullpage('#fullpage', {
+let fp1 = new fullpage('#fullpage', {
   scrollingSpeed: 1000,
   easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
   navigation: true,
@@ -16,7 +16,7 @@ new fullpage('#fullpage', {
   },
 });
 
-new fullpage('#fullpage2', {
+let fp2 = new fullpage('#fullpage2', {
   scrollingSpeed: 1000,
   easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
   navigation: true,
@@ -280,7 +280,7 @@ let animateBackground = (origin, nextSlide, direction) => {
       targets: bg,
       duration: bgDuration,
       easing: bgEasing,
-      top: '62%',
+      top: '68%',
       left: 0,
       width: '100%',
     });
