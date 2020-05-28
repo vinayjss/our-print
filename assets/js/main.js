@@ -4,7 +4,6 @@ let fp1 = new fullpage('#fullpage', {
   scrollingSpeed: 1000,
   easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
   navigation: true,
-  // responsiveWidth: 1000,
   onLeave: function (origin, nextIndex, direction) {
     animateBackground(origin.index, nextIndex.index, direction);
     shadowNavbar(nextIndex.index);
@@ -16,17 +15,6 @@ let fp1 = new fullpage('#fullpage', {
   },
 });
 
-let fp2 = new fullpage('#fullpage2', {
-  scrollingSpeed: 1000,
-  easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
-  navigation: true,
-  onLeave: function (index, nextIndex, direction) {
-    animateBackground2(nextIndex.index, direction);
-    shadowNavbar(nextIndex.index);
-    exploreConfig2(nextIndex.index);
-  },
-});
-
 //BACK TO TOP
 function backToTop() {
   fp1.moveTo(1, 0);
@@ -35,16 +23,6 @@ function backToTop() {
 //MOVE ONE SLIDE DOWN
 function moveSlideDown() {
   fp1.moveSectionDown();
-}
-
-//BACK TO TOP2
-function backToTop2() {
-  fp2.moveTo(1, 0);
-}
-
-//MOVE ONE SLIDE DOWN2
-function moveSlideDown2() {
-  fp2.moveSectionDown();
 }
 
 //SHADOW NAVBAR
@@ -77,15 +55,6 @@ function exploreConfig(nextIndex) {
     document.querySelector('.explore').style.display = 'none';
   } else {
     document.querySelector('.explore').style.display = 'block';
-  }
-}
-
-//EXPLORE CONFIG2
-function exploreConfig2(nextIndex) {
-  if (nextIndex == 1) {
-    document.querySelector('.contactexplore').style.display = 'none';
-  } else {
-    document.querySelector('.contactexplore').style.display = 'block';
   }
 }
 
@@ -280,7 +249,7 @@ let animateBackground = (origin, nextSlide, direction) => {
       targets: bg,
       duration: bgDuration,
       easing: bgEasing,
-      top: '68%',
+      top: '100%',
       left: 0,
       width: '100%',
     });
@@ -292,29 +261,6 @@ let animateBackground = (origin, nextSlide, direction) => {
     }, 300);
   }
 };
-
-//CONTACT ANIMATION BG
-var contactbg = document.querySelector('.contact-animation-bg');
-function animateBackground2(nextIndex) {
-  if (nextIndex == 0) {
-    anime({
-      targets: contactbg,
-      duration: bgDuration,
-      easing: bgEasing,
-      top: 0,
-      right: '50%',
-    });
-  }
-  if (nextIndex == 1) {
-    anime({
-      targets: contactbg,
-      duration: bgDuration,
-      easing: bgEasing,
-      top: '65%',
-      right: 0,
-    });
-  }
-}
 
 // COUNTER
 let counters = document.querySelectorAll('.counter');
@@ -406,3 +352,49 @@ anime({
   translateY: [20, 0],
   delay: 1400,
 });
+
+
+
+
+// CORONA MODAL
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+window.onload = function () {
+  modal.style.display = "block";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+// PLANS ACCORDIONS
+var showContent = false
+const collapseBtns = document.querySelectorAll('.collopse_arrow img');
+const collapsecontents = document.querySelectorAll('.accordion_content')
+collapseBtns.forEach(node => {
+  node.addEventListener('click', (e) => {
+    let siblingAccordionContent = node.parentElement.previousElementSibling
+    const nodeArray = [...collapsecontents]
+    const remainingCollapseContents = nodeArray.filter(node => node !== siblingAccordionContent)
+    remainingCollapseContents.forEach(node => node.style.maxHeight = null)
+    collapseBtns.forEach(node => node.style.transform = 'rotate(0deg)')
+    if (siblingAccordionContent.style.maxHeight) {
+      siblingAccordionContent.style.maxHeight = null;
+      node.style.transform = 'rotate(0deg)'
+    }
+    else {
+      siblingAccordionContent.style.maxHeight = siblingAccordionContent.scrollHeight + "px";
+      node.style.transform = 'rotate(90deg)'
+    }
+  })
+})

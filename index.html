@@ -32,6 +32,7 @@
   </nav>
   <!--------- NAVBAR END ---------->
 
+
   <main id="fullpage">
     <!-------- SECTION1 START------->
     <section class="section section1">
@@ -71,6 +72,7 @@
     </section>
     <!-------- SECTION1 END------->
 
+
     <!-------- SECTION2 START------->
     <section class="section section2">
       <div class="container-fluid w-75 section_inner">
@@ -80,32 +82,45 @@
               <div class="feature_container feature_container1">
                 <h1>Freemium</h1>
                 <p>
-                  Every month you can print upto 100 pages for FREE (an extra allowance of 101-150
-                  pages can be added)
+                  One free print every month up to 100 pages.
                 </p>
-                <div>
+                <div class="accordion_content">
                   <p> <span>&#8594;</span> Colour print</p>
                   <p><span>&#8594;</span> Spiral bounded</p>
                   <p><span>&#8594;</span> Specially designed for Students</p>
                   <p><span>&#8594;</span> Comeback every month</p>
                 </div>
+                <div class="collopse_arrow text-right">
+                  <img src="/assets/img/left-arrow.svg" alt="">
+                </div>
               </div>
               <div class="feature_container feature_container2">
                 <h1>Standard</h1>
-                <p><span>&#8594;</span> Print multiple documents, multiple times</p>
-                <p><span>&#8594;</span> B/W or Colour</p>
-                <p><span>&#8594;</span> Spiral / Stapled / Loose copies</p>
-                <p><span>&#8594;</span> Low pricing compared to home printer or Local shops</p>
+                <p>Unlimited Pages Colour, B&W, Multi Colour. Binding Configuration.</p>
+                <div class="accordion_content">
+                  <p><span>&#8594;</span> Print multiple documents, multiple times</p>
+                  <p><span>&#8594;</span> B/W or Colour</p>
+                  <p><span>&#8594;</span> Spiral / Stapled / Loose copies</p>
+                  <p><span>&#8594;</span> Low pricing compared to home printer or Local shops</p>
+                </div>
+                <div class="collopse_arrow text-right">
+                  <img src="/assets/img/left-arrow.svg" alt="">
+                </div>
               </div>
               <div class="feature_container feature_container3">
                 <h1>Official Documents</h1>
                 <p>
-                  Suitable for professional printing
+                  Customisation of Covers. B&W and Colour. Printing Instructions.
                 </p>
-                <p><span>&#8594;</span> B/w or Colour</p>
-                <p><span>&#8594;</span> Regular and Bond paper type</p>
-                <p><span>&#8594;</span> Ideal for Thesis / Project</p>
-                <p><span>&#8594;</span> Low pricing compared to home printer / Local shops</p>
+                <div class="accordion_content">
+                  <p><span>&#8594;</span> B/w or Colour</p>
+                  <p><span>&#8594;</span> Regular and Bond paper type</p>
+                  <p><span>&#8594;</span> Ideal for Thesis / Project</p>
+                  <p><span>&#8594;</span> Low pricing compared to home printer / Local shops</p>
+                </div>
+                <div class="collopse_arrow text-right">
+                  <img src="/assets/img/left-arrow.svg" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -349,8 +364,10 @@
     <section class="section section6">
       <div class="container-fluid w-75 numbers">
         <h2 class="head">We want to give back to the nature more than what we use..!!</h2>
-        <p class="desc">Each tree can provide approximately 8500 pages, OURPRINT team decided to plant a tree for
-          every 5000 pages printed via OURPRINT. Trees add unity and can combat climate change.</p>
+        <div class="desc_container">
+          <p class="desc">Each tree can provide approximately 8500 pages, OURPRINT team decided to plant a tree for
+            every 5000 pages printed via OURPRINT. Trees add unity and can combat climate change.</p>
+        </div>
         <div class="row mt-5">
           <div class="col-lg-4">
             <div class="number_container">
@@ -396,54 +413,57 @@
           </div>
         </div>
       </div>
-      <div class="footer">
-        <div class="container-fluid w-75 footer_inner">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4">
-              <span>Address</span>
-              <p>H.No 3-10-20/54/A/3</p>
-              <p>Gokhale Nagar, Ramantapur</p>
-              <p>Hyderabad, Telangana,</p>
-              <p>500013</p>
-            </div>
-            <div class="col-xl-3 col-lg-3">
-              <span>Phone</span>
-              <p>+91 9994994433</p>
-              <span>Enquiries</span>
-              <p>info@ourprint.in</p>
-            </div>
-            <div class="col-xl-3 col-lg-2">
-              <span>Follow Us</span>
-              <p>Facebook</p>
-              <p>Twitter</p>
-              <p>Instagram</p>
-            </div>
-            <div class="col-xl-3 col-lg-3">
-              <div class="backtop">
-                <span>BACK TO TOP</span>
-                <span onclick="backToTop()">
-                  <img src="./assets/img/top.svg" alt="" />
-                </span>
-              </div>
-              <p class="privacy">
-                <a href="privacy.html">
-                  Privacy and Policy
-                </a>
-              </p>
-              <p class="privacy">
-                <a href="terms.html">
-                  Terms and Conditions
-                </a>
-              </p>
-              <span class="copyright">
-                © Copyright OUR PRINT. All Rights Reserved
+    </section>
+    <section class="section fp-auto-height footer_section">
+      <div class="container-fluid w-75 footer_inner">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4">
+            <span>Address</span>
+            <p>H.No 3-10-20/54/A/3</p>
+            <p>Gokhale Nagar, Ramantapur</p>
+            <p>Hyderabad, Telangana,</p>
+            <p>500013</p>
+          </div>
+          <div class="col-xl-3 col-lg-3">
+            <span>Phone</span>
+            <p>+91 9994994433</p>
+            <span>Enquiries</span>
+            <p>info@ourprint.in</p>
+          </div>
+          <div class="col-xl-3 col-lg-2">
+            <span>Follow Us</span>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+          </div>
+          <div class="col-xl-3 col-lg-3">
+            <div class="backtop">
+              <span>BACK TO TOP</span>
+              <span onclick="backToTop()">
+                <img src="./assets/img/top.svg" alt="" />
               </span>
             </div>
+            <p class="privacy">
+              <a href="privacy.html">
+                Privacy and Policy
+              </a>
+            </p>
+            <p class="privacy">
+              <a href="terms.html">
+                Terms and Conditions
+              </a>
+            </p>
+            <span class="copyright">
+              © Copyright OUR PRINT. All Rights Reserved
+            </span>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+
+
 
   <!---------- ANIMATED BG -------------->
   <div class="animation-bg"></div>
@@ -470,8 +490,27 @@
     </span>
   </div>
 
+  <!------------- CARONA MODAL ----------->
+  <div id="myModal" class="carona_modal">
+    <div class="carona_modal_content">
+      <div class="carona_modal_header">
+        <span class="close">&times;</span>
+      </div>
+      <div class="carona_modal_body">
+        <h3>#stayhomestaysafe</h3>
+        <p>GOI and Telangana state government has enforced social distancing, we have set up the perfect
+          delivery system for you guys, anyone can get their documents be printed online and have them
+          without stepping out from your home.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
   <!------------ SCRIPT ----------->
   <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
   <script src="./assets/js/fullpage.min.js"></script>
   <script src="./assets/js/anime.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
