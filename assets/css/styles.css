@@ -154,9 +154,9 @@
   content: '';
   position: absolute;
   z-index: 10;
-  background: no-repeat
-    url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E');
+  background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%2212px%22%20height%3D%2236px%22%3E%3Cpath%20fill%3D%22rgba(17,17,17,0.9)%22%20transform%3D%22rotate(90 6 6)%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E');
   background-size: 100% auto;
+  background-repeat: no-repeat;
   width: 6px;
   height: 18px;
   left: 100%;
@@ -1352,7 +1352,6 @@ nav .links a {
 
 
 
-
 /******** CARONA MODAL **********/
 .carona_modal {
   display: none; 
@@ -1373,7 +1372,7 @@ nav .links a {
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 50%;
+  width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.8s
@@ -1384,7 +1383,7 @@ nav .links a {
 .carona_modal_body h3{
  font-family: 'circular_bold';
  text-align: center;
- color:red
+ color:red;
 }
 .carona_modal_body p{
  font-family: 'circular_regular';
@@ -1405,14 +1404,22 @@ nav .links a {
   padding: 2px 16px;
   color: white;
 }
-
-
-
-
-
-
-
-
-body.footer-open .container {
-  transform: translateY(-12.14286em);
+@media (max-width:767px){
+  .carona_modal_content {
+    width: 80%;
+  }
 }
+@media (max-width:567px){
+  .carona_modal_content {
+    width: 90%;
+  }
+  .carona_modal_body h3{
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+

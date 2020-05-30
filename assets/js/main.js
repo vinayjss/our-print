@@ -1,5 +1,6 @@
 // FULLPAGE
 var navbar = document.getElementById('nav');
+
 let fp1 = new fullpage('#fullpage', {
   scrollingSpeed: 1000,
   easingcss3: 'cubic-bezier(0.86, 0, 0.07, 1)',
@@ -255,7 +256,7 @@ let animateBackground = (origin, nextSlide, direction) => {
     });
 
     setTimeout(() => {
-      Counter(counters[0], 200, 50);
+      Counter(counters[0], 2000, 50);
       Counter(counters[1], 50, 50);
       Counter(counters[2], 1, 100);
     }, 300);
@@ -314,11 +315,6 @@ contactForm.onsubmit = function (e) {
 };
 
 //WINDOW LOGIC
-window.onload = function () {
-  if (window.innerWidth < 992) {
-    fullpage_api.destroy('all');
-  }
-};
 anime({
   targets: '.section1_col_left h1',
   duration: 1000,
@@ -362,6 +358,9 @@ var span = document.getElementsByClassName("close")[0];
 
 window.onload = function () {
   modal.style.display = "block";
+  if (window.innerWidth < 992) {
+    fullpage_api.destroy('all');
+  }
 }
 
 span.onclick = function () {
