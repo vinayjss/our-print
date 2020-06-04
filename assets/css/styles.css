@@ -413,17 +413,17 @@ nav .links a {
 }
 .section2_col_left .feature_container {
   margin-top: 20px;
-  background: #53905F;
+  background: #53905f;
   padding: 10px 20px;
   border-radius: 10px;
   color: white;
   transition: 0.5s linear;
 }
-.collopse_arrow img{
+.collopse_arrow img {
   cursor: pointer;
   transition: 0.5s linear;
 }
-.accordion_content{
+.accordion_content {
   max-height: 0;
   overflow: hidden;
   transition: 0.5s linear;
@@ -432,7 +432,7 @@ nav .links a {
   margin-top: 0px;
 }
 .section2_col_left h1 {
-  font-size:calc(1.8rem + 0.3vw);
+  font-size: calc(1.8rem + 0.3vw);
   line-height: 60px;
   font-family: 'circular_medium';
   margin: 0px;
@@ -939,22 +939,22 @@ nav .links a {
   opacity: 0.7;
   text-align: justify;
 }
-.review_btn{
-  border:none;
-  background:none;
-  padding:10px 40px;
-  color:white;
-  border:1px solid white;
+.review_btn {
+  border: none;
+  background: none;
+  padding: 10px 40px;
+  color: white;
+  border: 1px solid white;
   border-radius: 8px;
   outline: none;
   transition: 0.5s;
   font-family: 'circular_regular';
 }
-.review_btn:focus{
+.review_btn:focus {
   outline: none;
 }
-.review_btn:hover{
-  background:white;
+.review_btn:hover {
+  background: white;
   color: black;
 }
 
@@ -1021,20 +1021,20 @@ nav .links a {
 }
 
 /******************************** SECTION6 *************************/
-.numbers .head{
+.numbers .head {
   font-family: 'circular_bold';
   font-size: 35px;
-  text-align:center;
+  text-align: center;
   color: #173a50;
 }
-.numbers .desc_container{
+.numbers .desc_container {
   width: 50%;
   margin: auto;
 }
-.numbers .desc{
+.numbers .desc {
   font-family: 'circular_regular';
   font-size: 15px;
-  text-align:center;
+  text-align: center;
 }
 .number_container h1 {
   font-size: 80px;
@@ -1092,10 +1092,10 @@ nav .links a {
 }
 .footer_section {
   background: #53905f;
-  padding-top:20px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
-.footer_inner{
+.footer_inner {
   padding-bottom: 80px;
 }
 .footer_section span {
@@ -1212,14 +1212,14 @@ nav .links a {
   .numbers {
     margin-top: 0px;
   }
-  .numbers .head{
+  .numbers .head {
     font-size: 30px;
   }
-  .numbers .desc_container{
-    width:90%;
+  .numbers .desc_container {
+    width: 90%;
   }
-  .numbers .desc{
-    font-size:14px;
+  .numbers .desc {
+    font-size: 14px;
   }
 }
 
@@ -1350,21 +1350,19 @@ nav .links a {
   color: #000069;
 }
 
-
-
 /******** CARONA MODAL **********/
 .carona_modal {
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 1; 
-  padding-top: 100px; 
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .carona_modal_content {
   position: relative;
@@ -1373,28 +1371,34 @@ nav .links a {
   padding: 0;
   border: 1px solid #888;
   width: 40%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
-  animation-duration: 0.8s
+  animation-duration: 0.8s;
 }
-.carona_modal_body{
+.carona_modal_body {
   padding: 16px;
 }
-.carona_modal_body h3{
- font-family: 'circular_bold';
- text-align: center;
- color:red;
+.carona_modal_body h3 {
+  font-family: 'circular_bold';
+  text-align: center;
+  color: red;
 }
-.carona_modal_body p{
- font-family: 'circular_regular';
- line-height: 30px;
+.carona_modal_body p {
+  font-family: 'circular_regular';
+  line-height: 30px;
 }
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 .close {
-  color:black;
+  color: black;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -1404,26 +1408,22 @@ nav .links a {
   padding: 2px 16px;
   color: white;
 }
-@media (max-width:767px){
+@media (max-width: 767px) {
   .carona_modal_content {
     width: 80%;
   }
 }
-@media (max-width:567px){
+@media (max-width: 567px) {
   .carona_modal_content {
     width: 90%;
   }
-  .carona_modal_body h3{
+  .carona_modal_body h3 {
     font-size: 24px;
   }
 }
 
-
-
-
-
 /******* LOADER *******/
-.loader_container{
+.loader_container {
   position: absolute;
   top: 0;
   left: 0;
@@ -1432,7 +1432,7 @@ nav .links a {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background: black;
+  background: white;
   z-index: 3000;
 }
 
@@ -1448,7 +1448,7 @@ nav .links a {
   animation: load7 1.8s infinite ease-in-out;
 }
 .loader {
-  color: #ffffff;
+  color: #53905f;
   font-size: 10px;
   margin: 80px auto;
   position: relative;
@@ -1493,5 +1493,3 @@ nav .links a {
     box-shadow: 0 2.5em 0 0;
   }
 }
-
-
