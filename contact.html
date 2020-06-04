@@ -63,15 +63,15 @@
               <form action="" id="contact_form">
                 <div class="input_group">
                   <span>Full Name</span>
-                  <input type="text" name="name" id="name" />
+                  <input type="text" required name="name" id="name" />
                 </div>
                 <div class="input_group">
                   <span>Mobile Number</span>
-                  <input type="number" name="phone" id="phone" />
+                  <input type="number" required name="phone" id="phone" />
                 </div>
                 <div class="input_group">
                   <span>Email ID</span>
-                  <input type="email" name="email" id="email" />
+                  <input type="email" required name="email" id="email" />
                 </div>
                 <div class="input_group">
                   <span>Details of Enquiry</span>
@@ -87,25 +87,42 @@
     <!-------- SECTION1 END------->
 
 
+
+
+
     <!-------- SECTION2 START------->
-    <section class="section contact_section2">
+    <section class="section section6">
       <div class="container-fluid w-75 numbers">
-        <div class="row ">
+        <h2 class="head">We want to give back to the nature more than what we use..!!</h2>
+        <div class="desc_container">
+          <p class="desc">Each tree can provide approximately 8500 pages, OURPRINT team decided to plant a tree for
+            every 5000 pages printed via OURPRINT. Trees add unity and can combat climate change.</p>
+        </div>
+        <div class="row mt-5">
           <div class="col-lg-4">
             <div class="number_container">
-              <h1>65,000</h1>
+              <h1 class="counter_number">
+                <span class="counter" data-target="200000">0</span> +
+              </h1>
+              <h1 class="original_number"><span>2,00,000+</span></h1>
               <p>Papers Printed</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="number_container number_container2">
-              <h1>10,000</h1>
+              <h1 class="counter_number">
+                <span class="counter" data-target="5000">0</span> +
+              </h1>
+              <h1 class="original_number"><span>5000+</span></h1>
               <p>Users till now</p>
             </div>
           </div>
           <div class="col-lg-4">
             <div class="number_container number_container3">
-              <h1>6,000</h1>
+              <h1 class="counter_number">
+                <span class="counter" data-target="45">0</span> +
+              </h1>
+              <h1 class="original_number"><span>45+</span></h1>
               <p>Trees Planted</p>
             </div>
           </div>
@@ -126,57 +143,89 @@
           </div>
         </div>
       </div>
-      <div class="footer">
-        <div class="container-fluid w-75 footer_inner">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4">
-              <span>Address</span>
-              <p>H.No 3-10-20/54/A/3</p>
-              <p>Gokhale Nagar, Ramantapur</p>
-              <p>Hyderabad, Telangana,</p>
-              <p>500013</p>
-            </div>
-            <div class="col-xl-3 col-lg-3">
-              <span>Phone</span>
-              <p>+91 9994994433</p>
-              <span>Enquiries</span>
-              <p>info@ourprint.in</p>
-            </div>
-            <div class="col-xl-3 col-lg-2">
-              <span>Follow Us</span>
-              <p>Facebook</p>
-              <p>Twitter</p>
-              <p>Instagram</p>
-            </div>
-            <div class="col-xl-3 col-lg-3">
-              <div class="backtop">
-                <span>BACK TO TOP</span>
-                <span onclick="backToTop2()">
-                  <img src="./assets/img/top.svg" alt="" />
-                </span>
-              </div>
-              <p class="empty">&nbsp;</p>
-              <p class="empty">&nbsp;</p>
-              <span class="copyright">
-                © Copyright OUR PRINT. All Rights Reserved
+    </section>
+    <!-------- SECTION2 END------->
+
+
+    <!-------- SECTION3 START------->
+    <section class="section fp-auto-height footer_section">
+      <div class="container-fluid w-75 footer_inner">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4">
+            <span>Address</span>
+            <p>H.No 3-10-20/54/A/3</p>
+            <p>Gokhale Nagar, Ramantapur</p>
+            <p>Hyderabad, Telangana,</p>
+            <p>500013</p>
+          </div>
+          <div class="col-xl-3 col-lg-3">
+            <span>Phone</span>
+            <p>+91 9994994433</p>
+            <span>Enquiries</span>
+            <p>info@ourprint.in</p>
+          </div>
+          <div class="col-xl-3 col-lg-2">
+            <span>Follow Us</span>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+          </div>
+          <div class="col-xl-3 col-lg-3">
+            <div class="backtop">
+              <span>BACK TO TOP</span>
+              <span onclick="backToTop2()">
+                <img src="./assets/img/top.svg" alt="" />
               </span>
             </div>
+            <p class="privacy">
+              <a href="privacy.html">
+                Privacy and Policy
+              </a>
+            </p>
+            <p class="privacy">
+              <a href="terms.html">
+                Terms and Conditions
+              </a>
+            </p>
+            <span class="copyright">
+              © Copyright OUR PRINT. All Rights Reserved
+            </span>
           </div>
         </div>
       </div>
-      </div>
     </section>
-    <!-------- SECTION2 END------->
+    <!-------- SECTION3 END------->
+
+
   </main>
 
   <!---------- ANIMATED BG -------------->
   <div class="contact-animation-bg"></div>
+
+  <!---------- Whatsapp Container -------------->
+  <section class="whatsapp-container">
+    <a href="https://api.whatsapp.com/send?phone=919700023336&amp;text=Hello there, Lets catch up and discuss about your idea."
+      target="_blank" data-balloon="Message us" data-balloon-pos="right">
+      <img style="width: 42px;" src="assets/img/whatsapp.svg" />
+    </a>
+  </section>
+  <section class="mobile-whatsapp">
+    <a href="https://api.whatsapp.com/send?phone=919700023336&amp;text=Hello there, Lets catch up and discuss about your idea."
+      target="_blank" data-balloon-pos-left="Message us">
+      <img style="width: 42px;" src="assets/img/whatsapp.svg" />
+    </a>
+  </section>
 
   <!-------- EXPLORE BUTTON -------->
   <div class="contactexplore">
     <span class="contactexploreBtn" onclick="moveSlideDown2()">
       <img class="contactexploreImg" src="./assets/img/next.svg" alt="" />
     </span>
+  </div>
+
+  <!-------- LOADER -------->
+  <div class="loader_container">
+    <div class="loader">Loading...</div>
   </div>
 
   <!------------ SCRIPT ----------->

@@ -261,6 +261,21 @@ let animateBackground = (origin, nextSlide, direction) => {
       Counter(counters[2], 1, 100);
     }, 300);
   }
+  if (nextSlide == 6) {
+    anime({
+      targets: bg,
+      duration: bgDuration,
+      easing: bgEasing,
+      top: '100%',
+      left: 0,
+      width: '100%',
+    });
+    setTimeout(() => {
+      Counter(counters[0], 2000, 50);
+      Counter(counters[1], 50, 50);
+      Counter(counters[2], 1, 100);
+    }, 300);
+  }
 };
 
 // COUNTER
@@ -357,10 +372,15 @@ var modal = document.getElementById("myModal");
 var span = document.getElementsByClassName("close")[0];
 
 window.onload = function () {
-  modal.style.display = "block";
   if (window.innerWidth < 992) {
     fullpage_api.destroy('all');
   }
+  setTimeout(() => {
+    document.querySelector('.loader_container').style.display = "none"
+  }, 2000);
+  setTimeout(() => {
+    modal.style.display = "block";
+  }, 2300);
 }
 
 span.onclick = function () {
